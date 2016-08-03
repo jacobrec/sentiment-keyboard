@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sentiment Keyboard by jacobrec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Sentiment Keyboard</h1>
+      <h2 class="project-tagline">An android keyboard that reads your text to determine whether what you say is offensive or not</h2>
+      <a href="https://github.com/jacobrec/sentiment-keyboard" class="btn">View on GitHub</a>
+      <a href="https://github.com/jacobrec/sentiment-keyboard/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jacobrec/sentiment-keyboard/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>Download now on <a href="URL">Google Play</a></p>
+
+<hr>
+
+<h2>
+<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works</h2>
+
+<p>This application is designed as a tool to discourage the use of offensive language and cyber-bullying. It uses a subtle two layer system - evasion and awareness - to achieve this, which is outlined below:</p>
+
+<h3>
+<a id="evasion" class="anchor" href="#evasion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Evasion</h3>
+
+<p>Before any offensive language detection takes place, the keyboard provides a next-word prediction feature to make typing easier for the user. This is accomplished using an <a href="https://en.wikipedia.org/wiki/N-gram">n-gram model</a>. It uses a corpus of the ~1 000 000 most commonly used English trigrams (ex. she-ate-the) modified to steer the user away from writing offensive sentences in the first place. This along with a spellchecker void of overtly inappropriate words encourages politer messages without the user even noticing.</p>
+
+<h3>
+<a id="awareness" class="anchor" href="#awareness" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Awareness</h3>
+
+<p>Then, when the phrase is complete and the button is pressed, the application takes in the input and analyzes it's offensiveness. To do this, it first breaks up the phrase into it's individual words, and then uses a Part-of-Speech tagger to identify what the word is (i.e. noun, adjective, determiner). From there, the application will run a series of tests on the phrase. Once it knows the results of those tests, it will make a decision, based on machine learning. Some of the tests are:</p>
+
+<p>What is the length of the sentence?
+How many exclamation marks are there?
+How many question marks are there?
+How many emoji's are there?
+How many verbs are there?
+How many determiners are there?
+How many adjectives are there?
+How many negations are there? (ex. Not, isn't)
+How many intensifiers are there? (ex. Very, extremely)</p>
+
+<p>And most importantly, 
+What is the polarity of the sentence?</p>
+
+<p>How we determine the polarity is similar. We take the phrase, and break it up into it's individual parts. We then run each word through a large corpus of individually annotated words with polarity scores (ex. Shit = -4). If the word is polar, we obtain the associated value and add it to the total. If there happens to be a negation, we may reverse the polarity of an individual value (-4 -&gt; +4), or if there is an intensifier, we may multiply the value (-4 -&gt; -8).</p>
+
+<h4>
+<a id="machine-learning" class="anchor" href="#machine-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Machine learning</h4>
+
+<p>Now, we introduce machine learning. It works by taking in our features (ex. Number of determiners), and identifying future instances of offensiveness based off past trends. In our case, we use supervised machine learning, because we are classifying data which is already annotated and it's offensiveness known. We provide a data-set for our classifier to train on, and we also provide the data to test. In this way, through our approach, the machine has "learned" how to classify phrases in the future with some accuracy.</p>
+
+<p>With all of our features in mind, we then run a linear regression classifier to predict whether or not the phrase is offensive. Linear regression classification works by taking our set of distinct data-points and then plotting the best possible linear function through the points to separate them with accuracy. The classifier has already built a function through supervised learning on annotated data from a ~5500 phrase twitter corpus, so now all that must be done is plotting the feature values on the grid to predict if it is offensive.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jacobrec/sentiment-keyboard">Sentiment Keyboard</a> is maintained by <a href="https://github.com/jacobrec">jacobrec</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
