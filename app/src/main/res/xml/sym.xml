@@ -1,0 +1,50 @@
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="0px"
+    android:verticalGap="0px"
+    android:keyHeight="60dp"
+    >
+    <Row android:rowEdgeFlags="top">
+        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
+        <Key android:codes="50" android:keyLabel="2"/>
+        <Key android:codes="51" android:keyLabel="3"/>
+        <Key android:codes="52" android:keyLabel="4"/>
+        <Key android:codes="53" android:keyLabel="5"/>
+        <Key android:codes="54" android:keyLabel="6"/>
+        <Key android:codes="55" android:keyLabel="7"/>
+        <Key android:codes="56" android:keyLabel="8"/>
+        <Key android:codes="57" android:keyLabel="9"/>
+        <Key android:codes="48" android:keyLabel="0" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row >
+        <Key android:codes="91" android:keyLabel="@string/opensquare" android:keyEdgeFlags="left"/>
+        <Key android:codes="93" android:keyLabel="@string/closesquare"/>
+        <Key android:codes="40" android:keyLabel="@string/openround"/>
+        <Key android:codes="41" android:keyLabel="@string/closeround"/>
+        <Key android:codes="123" android:keyLabel="@string/opensquiggle"/>
+        <Key android:codes="125" android:keyLabel="@string/closesquiggle"/>
+        <Key android:codes="59" android:keyLabel="@string/semicolon"/>
+        <Key android:codes="58" android:keyLabel="@string/colon"/>
+        <Key android:codes="39" android:keyLabel="@string/singlequote"/>
+        <Key android:codes="34" android:keyLabel="@string/doublequote" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row >
+        <Key android:codes="60" android:keyLabel="@string/lessthan" android:keyEdgeFlags="left"/>
+        <Key android:codes="62" android:keyLabel="@string/greaterthan"/>
+        <Key android:codes="63" android:keyLabel="@string/quest"/>
+        <Key android:codes="47" android:keyLabel="@string/slash"/>
+        <Key android:codes="124" android:keyLabel="@string/pipe"/>
+        <Key android:codes="92" android:keyLabel="@string/backslash"/>
+        <Key android:codes="33" android:keyLabel="@string/exclam"/>
+        <Key android:codes="36" android:keyLabel="@string/dolla"/>
+        <Key android:codes="35" android:keyLabel="@string/hashtag"/>
+        <Key android:codes="37" android:keyLabel="@string/percent" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="-8920" android:keyLabel="abc" android:keyWidth="10%p"  android:keyEdgeFlags="left"/>
+        <Key android:codes="64" android:keyLabel="@string/at" android:keyWidth="10%p"/>
+        <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="40%p" android:isRepeatable="true"/>
+        <Key android:codes="-5" android:keyLabel="DEL" android:keyWidth="20%p" android:isRepeatable="true"/>
+        <Key android:codes="-4" android:keyLabel="DONE" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+    </Row>
+</Keyboard>

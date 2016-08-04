@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Sentiment Keyboard</string>
+    <string name="simple_ime">English (CA)</string>
+    <string name="subtype_en_US">Sentiment Keyboard</string>
+    <string name="hashtag">#</string>
+    <string name="percent">%</string>
+    <string name="dolla">$</string>
+    <string name="exclam">!</string>
+    <string name="backslash">\\</string>
+    <string name="pipe">|</string>
+    <string name="slash">/</string>
+    <string name="greaterthan"><![CDATA[>]]></string>
+    <string name="lessthan"><![CDATA[<]]></string>
+    <string name="quest">\?</string>
+    <string name="singlequote">\'</string>
+    <string name="doublequote">\"</string>
+    <string name="colon">:</string>
+    <string name="semicolon">;</string>
+    <string name="closesquiggle">}</string>
+    <string name="opensquiggle">{</string>
+    <string name="closeround">)</string>
+    <string name="openround">(</string>
+    <string name="closesquare">]</string>
+    <string name="opensquare">[</string>
+    <string name="periodAltSymbols">!.?</string>
+    <string name="title_activity_main">Sentiment Keyboard</string>
+    <string name="howitworks"><![CDATA[    This application is designed as a tool to discourage the use of offensive language and cyberbullying. It uses a variety of techniques to achieve this, which are outlined below:\n\nBefore any offense language detection takes place, the keyboard provides a next-word prediction feature to make typing easier for the user. This is accomplished using an n-gram model. It uses a corpus of the ~ 1 000 000 most commonly used English trigrams (ex. she-ate-the) in order to best predict what you mean to type next.\n\nThen, when the phrase is complete and the button is pressed, the application takes in the input and analyzes it\'s offensiveness. To do this, it first breaks up the phrase into it\'s individual words, and then uses a Part-of-Speech tagger to identify what the word is (i.e. noun, adjective, determiner). From there, the application will run a series of tests on the phrase. Some of the tests are:\n\nWhat is the length of the sentence?\nHow many exclamation marks are there?\nHow many question marks are there?\nHow many emoji\'s are there?\nHow many verbs are there?\nHow many determiners are there?\nHow many adjectives are there?\nHow many negations are there? (ex. Not, isn\'t)\nHow many intensifiers are there? (ex. Very, extremely)\n\nAnd most importantly, \nWhat is the polarity of the sentence?\n\nHow we determine the polarity is similar. We take the phrase, and break it up into it\'s individual parts. We then run each word through a large corpus of individually annotated words with polarity scores (ex. Shit = -4). If the word is polar, we obtain the associated value and add it to the total. If there happens to be a negation, we may reverse the polarity of an individual value (-4 -> +4), or if there is an intensifier, we may multiply the value (-4 -> -8).\n\nNow, we introduce machine learning. It works by taking in our features (ex. Number of determiners), and identifying future instances of offensiveness based off past trends. In our case, we use supervised machine learning, because we are classifying data which is already annotated and it\'s offensiveness known. We provide a data-set for our classifier to train on, and we also provide the data to test. In this way, through our approach, the machine has \"learned\" how to classify phrases in the future with some accuracy.\n\nWith all of our features in mind, we then run a linear regression classifier to predict whether or not the phrase is offensive. Linear regression classification works by taking our set of distinct data-points and then plotting the best possible linear function through the points to separate them with accuracy. The classifier has already built a function through supervised learning on annotated data from a ~5500 phrase twitter corpus, so now all that must be done is plotting the feature values on the grid to predict if it is offensive.]]></string>
+    <string name="enablemessage"><![CDATA[Please check \"Sentiment Keyboard\" in your Language & input settings. This will authorize it to run on your device. When you enable a keyboard you will see a message about the keyboard collecting personal data like passwords. This is built into the android operating system, don\'t worry as sentiment keyboard does not collect any data about you as you type. Once you have done that, press back to return to this screen.]]></string>
+    <string name="setmessage" ><![CDATA[Please select \"Sentiment Keyboard\" as your active keyboard]]> </string>
+    <string name="at">\@</string>
+</resources>
+
