@@ -1,7 +1,7 @@
 # Sentiment Keyboard
 An android keyboard that reads your text to determine whether what you say is offensive or not
 ## Installing app
-  todo add google play link
+  Go to [Google Play store] (https://play.google.com/store/apps/details?id=com.chair49.sentimentkeyboard)
   
 ## Running source
   1. `git clone` to where ever you want files to be
